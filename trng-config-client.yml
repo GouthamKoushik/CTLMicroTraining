@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: trng-config-client
+    
+server:
+  port: 8815
+  
+client:
+  message: Its my first message
+  
+india:
+  whether: cold
+  
+today:
+  date: 12/12/2018
+  
+datasource:
+  name: mydb
+  
+database:
+  connection:
+    pool:
+      size: 10

@@ -1,0 +1,17 @@
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+zuul:
+  routes:
+    admin-service:
+      path: /admin-service/**
+      serviceId: trng-admin-service
+    salary-service:
+      path: /salary-service/**
+      serviceId: trng-salary-service

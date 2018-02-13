@@ -9,7 +9,7 @@ client:
   message: Its my first message
   
 india:
-  whether: cold
+  weather: cold
   
 today:
   date: 12/12/2018

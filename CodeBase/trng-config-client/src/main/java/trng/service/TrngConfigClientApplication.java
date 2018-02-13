@@ -16,7 +16,7 @@ public class TrngConfigClientApplication {
 		SpringApplication.run(TrngConfigClientApplication.class, args);
 	}
 	
-	
+	@Value("${server.port}")
 	private String serverPort;
 	
 	@Value("${client.message}")
@@ -34,14 +34,14 @@ public class TrngConfigClientApplication {
 	@Value("${database.connection.pool.size}")
 	private String connectionPoolSize;
 	
-	@GetMapping("properties")
+	@GetMapping("/properties")
 	public String getProperties() {
 		return 
-				"serverPort: " + serverPort + ","
-				+ "message: " + message + ","
-				+ "weather: " + weather + ","
-				+ "todayDate: " + todayDate + ","
-				+ "datasourcName: " + datasourceName + ","
-				+ "connectionPoolSize: " + connectionPoolSize;
+				"<h4> serverPort: " + serverPort + ", "
+				+ "message: " + message + ", "
+				+ "weather: " + weather + ", "
+				+ "todayDate: " + todayDate + ", "
+				+ "datasourceName: " + datasourceName + ", "
+				+ "connectionPoolSize: " + connectionPoolSize + "</h4>";
 	}
 }
